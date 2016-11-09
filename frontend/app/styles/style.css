@@ -1,0 +1,24 @@
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button-green  {
+  background-color: #4CAF50; 
+}
+.button-yellow {
+  background-color: #cccc00;
+}
+
+.button-orange {
+  background-color: #ff9900; 
+}
+
+.button-red {
+  background-color: #f44336;
+}

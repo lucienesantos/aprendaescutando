@@ -1,0 +1,16 @@
+
+<div data-ng-init="init()">
+
+	<h1>Select a Game Level</h1>
+
+	<button  ui-sref="game({id: video.id, level: 'beginner'})" class="button button-green" >Beginner - Fill {{countWordsRandomBeginner}} words de {{video.totalWords}}  10% </button>
+
+	<button ui-sref="game({id: video.id, level: 'intermediate'})" class="button button-yellow" >Intermediate - Fill {{countWordsRandomIntermediate}} words de {{video.totalWords}}  25%</button>
+	
+	<button ui-sref="game({id: video.id, level: 'advenced'})" class="button button-orange" >Advanced - Fill {{countWordsRandomAdvanced}} words de {{video.totalWords}}  50%</button>
+		
+	<button ui-sref="game({id: video.id, level: 'expert'})"  class="button button-red" >Expert - Fill all words {{video.totalWords}} </button>
+
+
+
+</div>
