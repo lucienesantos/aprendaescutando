@@ -22,3 +22,153 @@
 .button-red {
   background-color: #f44336;
 }
+/*.container{
+  padding:40px;
+  width:100%;
+  height:260px;
+  position:relative;
+  background-color:#c2f0f0
+}*/
+.video-cart-main {
+  padding: 18px 26px;
+  width:310px;height:230px;
+  background-color:#33cccc!important;
+}
+
+.video-cart{
+  padding: 3px 5px;
+  float: left; width: 30%; 
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.list{
+  padding:0.01em 16px
+  width:100%;height:260px;
+  position:relative;
+  background-color:#c2f0f0!important;
+}
+.title{
+  color: #006666;
+}
+
+.artiste{
+  font-size: 14px;
+  color: #003366;
+  line-height: 0.6
+}
+.plays{
+  font-size: 10px;
+  color: #ffffff;
+  line-height: 0.6
+}
+.video-cart:hover {
+  display: block;
+  position:relative;
+  top:-10px;
+  right: -10px;
+  height: 20px;
+}
+.try-again{
+  z-index: 99;
+  position:absolute;
+  background-color: #00e6e6;
+  height: 100%;
+  width:100%;
+
+}
+/*.container-main-game{
+  padding-left:23%;
+  padding-top: 5px;
+  width:100%;
+  height:420px;
+  position:relative;
+}*/
+
+.video_current{
+  padding:5px;
+  width: 100%;
+  height: 400px;
+  position:relative;
+  background-color:#00e6e6
+}
+.video_current > iframe {
+  height: 100%;
+}
+
+.button-icon {
+  height: 50px;
+  background-color:transparent; 
+  border-color:transparent;
+} 
+
+.btn-replay {
+  margin-bottom: 43%;
+} 
+
+.btn-retry{
+  padding: 25% 12px !important ;
+}
+
+.subtitle{
+  text-align: center !important;
+  margin-top: 10px;
+  margin-bottom: 10px ;
+}
+
+.hank{
+  background-color: #00e6e6;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 80px;
+  padding: 8px;
+}
+
+.scores{
+  color: #FEFEFE;
+  height: 28px;
+  line-height: 28px;
+  display: inline-block;
+  margin: 12px 0 0;
+  padding: 0 5px;
+  color: #fff;
+  background: rgba(0,0,0,0.08);
+  text-align: center;
+}
+.sub{
+  display: inline-block;
+
+}
+
+/* Styling for the ngProgress itself */
+#ngProgress {
+    margin: 0;
+    padding: 0;
+    z-index: 99998;
+    background-color: green;
+    color: green;
+    box-shadow: 0 0 10px 0; /* Inherits the font color */
+    height: 2px;
+    opacity: 0;
+
+    /* Add CSS3 styles for transition smoothing */
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Styling for the ngProgress-container */
+#ngProgress-container {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+

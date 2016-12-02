@@ -4,6 +4,7 @@ var Lyric = function(subtitles) {
   this.totalWords = 0;
   this.selectedGaps = [];
   this.allLineGaps = [];
+  this.totalRandomWords;
 
 
   this.countWords = function() {
@@ -42,7 +43,7 @@ var Lyric = function(subtitles) {
 
   this.selectWordsRandom = function(level) {
     var interval = parseInt(100/this.percentulParam(level));
-    var totalRandomWords = Math.round(this.totalWords / interval);
+    this.totalRandomWords = Math.round(this.totalWords / interval);
     var initInterval = 0;
     var lastInterval = interval;
     var selectedWordIndex = Math.randomInRange(initInterval, lastInterval);

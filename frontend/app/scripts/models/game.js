@@ -6,6 +6,7 @@ var Game = function(lyric, video) {
   this.currentSubtitleIndex = 0;
   this.indexWordExpected = 0;
   this.nextSubtitle;
+  this.hits = 0;
 
 
   this.videoPlaying = function(){
@@ -16,9 +17,17 @@ var Game = function(lyric, video) {
     document.getElementById('subtitle').innerHTML = this.currentSubtitleObj.textToShow();
   };
 
+  this.clearVariables = function(){
+    this.currentSubtitleObj = {};
+    this.currentSubtitleIndex = 0;
+    this.indexWordExpected = 0;
+    this.nextSubtitle;
+    this.hits = 0;
+  }
+
   this.scanner = function(){
     $(window).focus();
-    this.currentSubtitleObj = this.currentSubtitle();
+    this.currentSubtitleObj = this.currentSubtitle(); 
     if (this.currentSubtitleObj != undefined) {
       this.showCurrentSubtitle();
       this.validateVideoState();
@@ -28,8 +37,13 @@ var Game = function(lyric, video) {
   this.setKeyUp = function() {
     var that = this;
     $(window).keyup(function(e){
+      that.currentSubtitleObj = that.currentSubtitle();
       var letter = String.fromCharCode(e.keyCode);
-      that.currentSubtitleObj.validateLetter(letter);
+      
+      var returnStatus = that.currentSubtitleObj.validateLetter(letter);
+      if (returnStatus.hitScore) {
+        that.hits++;
+      }
     });
   };
 
@@ -52,6 +66,7 @@ var Game = function(lyric, video) {
 
   this.currentSubtitle = function(){
     var currentTime = this.video.getCurrentTime();
+
     for (var i = 0; i < lyric.subtitles.length - 1; i++) {
       var subtitle = lyric.subtitles[i];
       var nextSubtitle = lyric.subtitles[i+1];

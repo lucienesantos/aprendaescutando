@@ -66,12 +66,15 @@ var Subtitle = function(time, text, index) {
   };
 
   this.validateLetter = function(letter) {
+    var returnStatus = {hitScore: false};
     if (this.randomGaps.length > 0) {
       this.randomGaps[0].validate(letter);
       if (this.randomGaps[0].isComplete()) {
+        returnStatus.hitScore = true;
         this.randomGaps.splice(0,1);
       }
     }
+    return returnStatus;
   };
 
   this.createGaps();

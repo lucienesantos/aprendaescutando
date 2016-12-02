@@ -15,20 +15,17 @@ angular.module('frontApp')
       'AngularJS',
       'Karma'
     ];
-
+  
+  $scope.currentVideo;
+  $scope.videoSelected;
 
   $scope.init = function(){
 
     $scope.loadPromisse = $RestApi.getVideos();
     $scope.loadPromisse.success(function(data){
       $scope.videosData = data;
+      $scope.currentVideo = data.last();
     });
-
-    // $scope.videosData = [
-    //   { id_video: '123', id_youtuber: 'hWEbcqZcXLA', artiste: 'Bruno Mars', music: "Uptown funk", total_words: 320},
-    //   { id_video: '456', id_youtuber: 'ZbZSe6N_BXs', artiste: 'Pharell', music: "Happy", total_words: 396},
-    //   { id_video: '789', id_youtuber: 'jGflUbPQfW8', artiste: 'Felix Jaeh', music: "Cheerleader", total_words: 384}
-    //   ];
   };
 
   

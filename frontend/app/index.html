@@ -11,14 +11,14 @@
     <!-- endbower -->
     <!-- endbuild -->
    
-    <link rel="stylesheet" href="styles/style.css">
+    
     <!-- endbuild -->
 
-
+    <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 
   </head>
-  <body ng-app="frontApp">
+  <body ng-app="frontApp" background="images/merry-christmas.jpg">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -54,11 +54,28 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-youtube-mb/src/angular-youtube-embed.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+     
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
         <script src="scripts/app.js"></script>
+
+
         <script src="scripts/services/restapi.js"></script>
 
         <script src="scripts/controllers/mainController.js"></script>
@@ -72,6 +89,9 @@
         <script src="scripts/models/gap.js"></script>
         <script src="scripts/models/subtitle.js"></script>
         <script src="scripts/models/game.js"></script>
+
+        <!--<script src="scripts/bootstrap.js"></script>
+        <script src="scripts/bootstrap.min.js"></script> -->
 
 
         <!-- endbuild -->

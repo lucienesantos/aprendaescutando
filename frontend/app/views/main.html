@@ -6,15 +6,37 @@
             <p>{{item.artiste}}</p>
         </div>
     </div> -->
+  <h2 class="title"> Aprenda escutando</h2>  
 
-  <div style="height: 235px;" ng-repeat="item in videosData">
-    <ul style="width: 1012px; left: 0px;">
+  <div class="form-group move-down">
+        <label for="Autocomplete">Generic Autocomplete</label>
+        <input type="text" id="Autocomplete" class="form-control" ng-autocomplete="result1" details="details1" options="options1"/>
+  </div>
+
+  <div class="container">
+    <div id="current_video" class="video-cart-main center">
       <li>
-        <a ui-sref="level({id: item.id})" tabindex="-1" title="{{item.artiste}}" + " - " + "{{item.music}}"> 
-          <img src="http://img.youtube.com/vi/{{item.id_youtuber}}/mqdefault.jpg" alt="{{item.artiste}}" + " - " + "{{item.music}}">
+        <a ui-sref="level({id: currentVideo.id})" tabindex="-1" title="{{currentVideo.artiste}} - {{currentVideo.music}}"> 
+          <img src="http://img.youtube.com/vi/{{currentVideo.id_youtuber}}/mqdefault.jpg" alt="{{currentVideo.artiste}} - {{currentVideo.music}}">
         </a>
       </li>
-    </ul>
-  </div>  
-  <div id="current">a</div>
+      <p class="artiste">{{currentVideo.music}} - {{currentVideo.artiste}}</p>
+      <p class="plays">Plays: {{currentVideo.plays}} </p>
+    </div>
+  </div>
+  <br>
+
+  <div id="container-list" class="list">
+    <div style="height: 235px;" ng-repeat="item in videosData" class="video-cart">
+      <ul style="width: 1012px; left: 0px;">
+        <li>
+          <a ui-sref="level({id: item.id})" tabindex="-1" title="{{item.artiste}} - {{item.music}}"> 
+            <img src="http://img.youtube.com/vi/{{item.id_youtuber}}/mqdefault.jpg" alt="{{item.artiste}} - {{item.music}}">
+          </a>
+        </li>
+        <p class="artiste">{{item.music}} - {{currentVideo.artiste}}</p>
+        <p class="plays">Plays: {{item.plays}} </p>
+      </ul>
+    </div>  
+  </div>
 </div>

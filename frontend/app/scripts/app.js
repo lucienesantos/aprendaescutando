@@ -19,6 +19,7 @@ var app = angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
+    'youtube-embed',
   ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {

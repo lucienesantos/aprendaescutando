@@ -10,4 +10,8 @@ app.service('$RestApi', ['$http', function ($http) {
       return $http.get(urlBase + '/videos/' + id );
   };
 
+  this.updateVideo = function(params){
+    return $http.put(urlBase + '/videos/' + params.id, params )
+  }
+
 }]);
