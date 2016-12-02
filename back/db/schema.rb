@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161107192217) do
+ActiveRecord::Schema.define(version: 20161109181350) do
 
   create_table "videos", force: :cascade do |t|
     t.string   "id_youtuber",   limit: 255
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20161107192217) do
     t.string   "music",         limit: 255
     t.integer  "total_words",   limit: 4
     t.text     "subtitle_text", limit: 65535
+    t.integer  "plays",         limit: 4
   end
 
 end

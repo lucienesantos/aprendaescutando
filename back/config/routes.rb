@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   resources :videos
+
+    match "videos/:id" => "videos#update", via: [ :put, :options]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
