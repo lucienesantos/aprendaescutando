@@ -18,6 +18,7 @@ angular.module('frontApp')
   
   $scope.currentVideo;
   $scope.videoSelected;
+  $scope.stringSearch;
 
   $scope.init = function(){
 
@@ -28,13 +29,32 @@ angular.module('frontApp')
     });
   };
 
+  $scope.videos = new Bloodhound({
+    datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+    queryTokenizer: Bloodhound.tokenizers.whitespace,
+    remote: {
+      url: 'http://localhost:3000/v1/public/videos?text=%QUERY',
+      wildcard: '%QUERY'
+    }
+  });
+
+  $scope.videosDataset = {
+    displayKey: 'music',
+    source: $scope.videos.ttAdapter(),
+    templates: {
+      empty: [
+        '<div class="tt-suggestion tt-empty-message">',
+        'No results were found ...',
+        '</div>'
+      ].join('\n'),
+    }
+  };  
   
   $scope.selectVideo = function(id){
     $scope.showViewLevel(id);
   };
 
   $scope.showViewLevel = function(id_youtuber){
-
   };
 
 }]);

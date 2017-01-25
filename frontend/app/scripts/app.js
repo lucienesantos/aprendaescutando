@@ -20,11 +20,23 @@ var app = angular
     'ngTouch',
     'ui.router',
     'youtube-embed',
+    'siyfion.sfTypeahead',
   ]);
 
 app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
     $stateProvider
+      .state('login', {
+        url: '/login',
+        templateUrl: 'views/login.html',
+        controler: 'LoginCtrl',
+        data: {
+          permissions: {
+            only: ['anonymous'],
+            redirectTo: 'main'
+          }
+        }
+      })
       .state('main', {
         url: '/',
         templateUrl: 'views/main.html',
@@ -47,5 +59,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
           id: null,
         }
 
+      })
+      .state('video', {
+        url: '/video',
+        templateUrl: 'views/video.html',
+        controller: 'VideoCtrl'
       });
   }]);

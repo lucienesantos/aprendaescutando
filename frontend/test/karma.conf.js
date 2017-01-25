@@ -33,6 +33,8 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-ui-router/release/angular-ui-router.js',
       'bower_components/angular-youtube-mb/src/angular-youtube-embed.js',
+      'bower_components/typeahead.js/dist/typeahead.bundle.js',
+      'bower_components/angular-typeahead/dist/angular-typeahead.js',
       'bower_components/angular-mocks/angular-mocks.js',
       'bower_components/tether/dist/js/tether.js',
       // endbower
