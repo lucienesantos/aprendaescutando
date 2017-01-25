@@ -5,9 +5,17 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
-  resources :videos
-
+  namespace :public, path: "/v1/public" do
+    match "videos" => "videos#index", via: [ :get, :options]
+    match "videos/:id" => "videos#show", via: [ :get, :options]
+    match "videos/" => "videos#create", via: [ :post, :options]
     match "videos/:id" => "videos#update", via: [ :put, :options]
+
+    match "/users/login" => "users#login", via: [:post, :options]
+  end  
+
+
+    
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

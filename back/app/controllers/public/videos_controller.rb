@@ -1,12 +1,20 @@
-class VideosController < ApplicationController
+class Public::VideosController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
 
   def index
-    @videos = Video.all
-    render json: @videos 
-    
+    if params[:text].nil?
+      @videos = Video.all
+    else
+      @videos = Video.search params[:text]
+    end  
+    render json: @videos
+  end
+
+  def create
+
   end  
+
 
   def show
     @video = Video.find_by_id(params_video[:id])
@@ -33,6 +41,7 @@ class VideosController < ApplicationController
         :music, 
         :total_words, 
         :subtitle_text,
-        :plays)
+        :plays,
+        :text)
     end  
 end

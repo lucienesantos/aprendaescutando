@@ -14,14 +14,14 @@
 ActiveRecord::Schema.define(version: 20161109181350) do
 
   create_table "videos", force: :cascade do |t|
-    t.string   "id_youtuber",   limit: 255
-    t.string   "artiste",       limit: 255
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "music",         limit: 255
-    t.integer  "total_words",   limit: 4
-    t.text     "subtitle_text", limit: 65535
-    t.integer  "plays",         limit: 4
+    t.string   "id_youtuber"
+    t.string   "artiste"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "music"
+    t.integer  "total_words"
+    t.text     "subtitle_text"
+    t.integer  "plays"
   end
 
 end
